@@ -1,0 +1,75 @@
+@import "./fonts/clashDisplay/css/clash-display.css";
+@import "./fonts/Roboto/css/roboto.css";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+@keyframes spinning {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes slider {
+    0%{
+        background: url("./images/pizza-1.webp") no-repeat center / cover;
+    }
+    24.2%{
+        background: url("./images/pizza-1.webp") no-repeat center / cover;
+    }
+    25%{
+        background: url("./images/pizza-2.webp") no-repeat center / cover;
+    }
+    49.2%{
+        background: url("./images/pizza-2.webp") no-repeat center / cover;
+    }
+    50%{
+        background: url("./images/pizza-3.webp") no-repeat center / cover;
+    }
+    74.2%{
+        background: url("./images/pizza-3.webp") no-repeat center / cover;
+    }
+    75%{
+        background: url("./images/pizza-4.webp") no-repeat center / cover;
+    }
+    99.2%{
+        background: url("./images/pizza-4.webp") no-repeat center / cover;
+    }
+    100%{
+        background: url("./images/pizza-1.webp") no-repeat center / cover;
+    }
+}
+
+@keyframes fadeUp {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+@keyframes fadeDown {
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+
+.fadeUp {
+    animation: fadeUp 0.5s ease;
+}
+.fadeDown {
+    animation: fadeDown 0.5s ease;
+}
+
+.a{
+    left: calc(50% - 400px);
+    top: 50%;
+}
+
+.spinning{
+    animation: spinning 60s linear infinite, slider 20s infinite;
+}
+
+.ov{
+    background: url("./images/overlay.svg");
+    mix-blend-mode: soft-light;
+    opacity: 0.6;
+}
